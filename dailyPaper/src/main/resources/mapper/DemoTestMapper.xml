@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yrx.simple.life.daily.paper.mapper.DemoTestMapper">
+    <resultMap id="baseResult" type="com.yrx.simple.life.daily.paper.po.DemoTest">
+        <id column="id" property="id" jdbcType="NUMERIC"/>
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <insert id="insert" parameterType="com.yrx.simple.life.daily.paper.po.DemoTest">
+        insert into demo_test(name, create_time)
+        values (#{name,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+    </insert>
+    <select id="list" resultMap="baseResult">
+        select *
+        from demo_test
+    </select>
+</mapper>

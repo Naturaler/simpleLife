@@ -1,0 +1,10 @@
+GET {{host}}/demo/list
+
+###
+POST {{host}}/demo/add
+Content-Type: application/json
+
+{
+  "name": "袁满",
+  "createTime": "2022-01-02 10:00:00"
+}

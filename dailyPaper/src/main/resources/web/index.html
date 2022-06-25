@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工作日志</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<!-- 导航栏 -->
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+<!--        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+          <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
+          <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"></path>
+        </svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 text-secondary">首页</a></li>
+        <li><a href="#" class="nav-link px-2 text-white">工作日志</a></li>
+        <li><a href="#" class="nav-link px-2 text-white">笔记</a></li>
+        <li>
+          <a class="nav-link px-2 text-white" href="#" role="button" data-bs-toggle="dropdown">工具</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">接口文档</a></li>
+            <li><a class="dropdown-item" href="#">sql解析</a></li>
+            <li><a class="dropdown-item" href="#">sql执行</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+      </form>
+
+      <div class="text-end">
+        <button type="button" class="btn btn-outline-light me-2">Login</button>
+        <button type="button" class="btn btn-warning">Sign-up</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 新增日志 -->
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">日期</label>
+    <input type="text" class="form-control" id="exampleInputEmail1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">计划</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea2" class="form-label">实际</label>
+    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea3" class="form-label">备注</label>
+    <textarea class="form-control" id="exampleFormControlTextarea3" rows="3"></textarea>
+  </div>
+</form>
+<button type="button" class="btn btn-success">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+  </svg>
+  提交
+</button>
+<!-- 日志详情 -->
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>日期</th>
+    <th>计划</th>
+    <th>实际</th>
+    <th>备注</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Bill</td>
+    <td>Gates</td>
+    <td>bill@example.com</td>
+    <td>bill@example.com</td>
+  </tr>
+  <tr>
+    <td>Steve</td>
+    <td>Jobs</td>
+    <td>steve@example.com</td>
+    <td>steve@example.com</td>
+  </tr>
+  <tr>
+    <td>Elon</td>
+    <td>Musk</td>
+    <td>elon@example.com</td>
+    <td>elon@example.com</td>
+  </tr>
+  </tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
