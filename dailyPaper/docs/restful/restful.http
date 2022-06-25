@@ -5,6 +5,6 @@ POST {{host}}/demo/add
 Content-Type: application/json
 
 {
-  "name": "袁满",
-  "createTime": "2022-01-02 10:00:00"
+  "name": "团藏",
+  "createTime": "2022-02-02"
 }

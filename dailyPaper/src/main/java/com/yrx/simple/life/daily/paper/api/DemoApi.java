@@ -1,6 +1,7 @@
 package com.yrx.simple.life.daily.paper.api;
 
-import com.yrx.simple.life.daily.paper.po.DemoTest;
+import com.yrx.simple.life.daily.paper.dto.input.DemoTestRequest;
+import com.yrx.simple.life.daily.paper.dto.output.DemoTestResponse;
 import com.yrx.simple.life.daily.paper.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,12 +18,12 @@ public class DemoApi {
     private DemoService demoService;
 
     @GetMapping("list")
-    public List<DemoTest> list() {
+    public List<DemoTestResponse> list() {
         return demoService.list();
     }
 
     @PostMapping("add")
-    public List<DemoTest> add(@RequestBody DemoTest demoTest) {
+    public List<DemoTestResponse> add(@RequestBody DemoTestRequest demoTest) {
         demoService.add(demoTest);
         return demoService.list();
     }

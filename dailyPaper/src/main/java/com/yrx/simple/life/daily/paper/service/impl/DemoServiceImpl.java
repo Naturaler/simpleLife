@@ -1,5 +1,8 @@
 package com.yrx.simple.life.daily.paper.service.impl;
 
+import com.yrx.simple.life.daily.paper.converter.DemoConverter;
+import com.yrx.simple.life.daily.paper.dto.input.DemoTestRequest;
+import com.yrx.simple.life.daily.paper.dto.output.DemoTestResponse;
 import com.yrx.simple.life.daily.paper.mapper.DemoTestMapper;
 import com.yrx.simple.life.daily.paper.po.DemoTest;
 import com.yrx.simple.life.daily.paper.service.DemoService;
@@ -16,17 +19,20 @@ import java.util.List;
 @Slf4j
 public class DemoServiceImpl implements DemoService {
     @Autowired
+    private DemoConverter demoConverter;
+    @Autowired
     private DemoTestMapper demoTestMapper;
 
     @Override
-    public List<DemoTest> list() {
+    public List<DemoTestResponse> list() {
         List<DemoTest> list = demoTestMapper.list();
         log.info("list demo data: {}", list);
-        return list;
+        return demoConverter.poToRes(list);
     }
 
     @Override
-    public void add(DemoTest demoTest) {
+    public void add(DemoTestRequest request) {
+        DemoTest demoTest = demoConverter.reqToPo(request);
         log.info("add demoTest: {}", demoTest);
         demoTestMapper.insert(demoTest);
     }
