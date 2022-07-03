@@ -36,7 +36,7 @@
    https://zhuanlan.zhihu.com/p/296543833
 
 6. angularjs常用命令
-   1. 启动服务
+   1. 启动服务（本地联调，默认4200端口）
    ```
    ng serve --open
    ```
@@ -46,19 +46,24 @@
    ```
    3. 创建service
    ```
-   ng generate service user-service
+   ng generate service user
    ```
    4. 创建component
    ```
    ng generate component user-list
    ```
+   5. 创建 workspace
+   ```
+   ng new angularclient
+   ```
 7. angularjs开发步骤
-   1. 创建类
-   2. 创建service
-   3. 创建component，展示的和提交的
-   4. 修改app.component.html
-   5. 修改app-routing.module.ts
-   6. 修改app.module.ts，特别是 providers 部分
+   1. 创建angular workspace
+   2. 创建类
+   3. 创建service
+   4. 创建component，展示的和提交的
+   5. 修改app.component.html
+   6. 修改app-routing.module.ts
+   7. 修改app.module.ts，特别是 providers 部分
 8. spring boot + angular 打包部署
    1. 打包angular
    ```

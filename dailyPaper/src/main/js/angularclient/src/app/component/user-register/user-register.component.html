@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="sub-container">
+    <div class="row">
+      <div class="col text-center">
+        <img class="img" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text"
+                 class="form-control"
+                 id="floatingPhone"
+                 placeholder="phone"
+                 name="phone"
+                 [(ngModel)]="registerDto.phone">
+          <label for="floatingPhone">Phone</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-floating">
+          <input type="password"
+                 class="form-control"
+                 id="floatingPassword"
+                 placeholder="Password"
+                 name="password"
+                 [(ngModel)]="registerDto.password">
+          <label for="floatingPassword">Password</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-floating">
+          <input type="password"
+                 class="form-control"
+                 id="floatingConfirmPassword"
+                 placeholder="Confirm Password"
+                 name="confirmPassword"
+                 [(ngModel)]="registerDto.confirmPassword">
+          <label for="floatingConfirmPassword">Confirm Password</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-primary w-100"
+                type="submit">
+          注册
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button"
+                class="btn btn-light"
+                (click)="onLogin()">
+          登录
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
