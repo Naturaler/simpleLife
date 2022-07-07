@@ -17,8 +17,17 @@
    ```
    npm -v
    ```
+   修改npm默认安装路径：
+   ```
+   npm config set prefix "E:/Developer/nodejs/npm_global"
+   npm config set cache "E:/Developer/nodejs/npm_cache"
+   ```
+   查看npm配置：
+   ```
+   npm config ls -l
+   ```
 
-3. 安装angular
+4. 安装angular
 
    npm install -g @angular/cli
 
@@ -27,15 +36,15 @@
    ng v
    ```
 
-4. spring boot + angular
+5. spring boot + angular
 
    https://www.baeldung.com/spring-boot-angular-web
 
-5. 富文本编辑器
+6. 富文本编辑器
 
    https://zhuanlan.zhihu.com/p/296543833
 
-6. angularjs常用命令
+7. angularjs常用命令
    1. 启动服务（本地联调，默认4200端口）
    ```
    ng serve --open
@@ -56,7 +65,7 @@
    ```
    ng new angularclient
    ```
-7. angularjs开发步骤
+8. angularjs开发步骤
    1. 创建angular workspace
    2. 创建类
    3. 创建service
@@ -64,7 +73,7 @@
    5. 修改app.component.html
    6. 修改app-routing.module.ts
    7. 修改app.module.ts，特别是 providers 部分
-8. spring boot + angular 打包部署
+9. spring boot + angular 打包部署
    1. 打包angular
    ```
    ng build
